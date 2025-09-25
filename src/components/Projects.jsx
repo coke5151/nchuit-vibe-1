@@ -1,8 +1,8 @@
 import React from 'react';
 
-export function Projects({ items }) {
+export function Projects({ items, wide = false }) {
   return (
-    <section id="projects" className="section">
+    <section id="projects" className={`section${wide ? ' section--wide' : ''}`}>
       <div className="container">
         <h2>Projects</h2>
         <div className="grid">

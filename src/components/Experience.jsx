@@ -1,8 +1,8 @@
 import React from 'react';
 
-export function Experience({ items }) {
+export function Experience({ items, wide = false }) {
   return (
-    <section id="experience" className="section">
+    <section id="experience" className={`section${wide ? ' section--wide' : ''}`}>
       <div className="container">
         <h2>Experience</h2>
         <ul className="timeline" aria-label="Work experience">

@@ -29,9 +29,9 @@ main {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 32px;
 }
 
 /* Header */
@@ -70,8 +70,8 @@ main {
   border-radius: 8px;
 }
 .top-nav {
-  margin-left: auto;
-  margin-right: 14px;
+  margin: 0 14px;
+  flex: 1;
 }
 
 .top-menu {
@@ -80,6 +80,8 @@ main {
   margin: 0;
   display: flex;
   gap: 8px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .top-menu a {
@@ -108,7 +110,7 @@ main {
 
 /* Sections */
 .section {
-  padding: 56px 0;
+  padding: 72px 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -116,6 +118,31 @@ main {
   margin-top: 0;
   margin-bottom: 16px;
   font-size: 24px;
+}
+
+/* Segmented width: allow certain sections to be wider than default */
+.section.section--wide .container {
+  max-width: 1440px;
+}
+
+/* Full-bleed band section (NCHUIT-like) */
+.section--bleed {
+  background: #f8fafc;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Hero-like spacing for top section */
+.section--hero .container {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .section--hero .container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+  }
 }
 
 .summary {
@@ -161,6 +188,18 @@ main {
 @media (min-width: 720px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

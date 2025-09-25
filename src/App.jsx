@@ -43,8 +43,8 @@ function App() {
       <Header resume={resume} currentRoute={route} routes={routes} />
       <main>
         {route === 'about' && <About summary={resume.summary} />}
-        {route === 'experience' && <Experience items={resume.experience} />}
-        {route === 'projects' && <Projects items={resume.projects} />}
+        {route === 'experience' && <Experience items={resume.experience} wide />}
+        {route === 'projects' && <Projects items={resume.projects} wide />}
         {route === 'skills' && <Skills items={resume.skills} />}
         {route === 'education' && <Education items={resume.education} />}
         {route === 'contact' && <Contact email={resume.email} location={resume.location} />}
