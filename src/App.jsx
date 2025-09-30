@@ -1,6 +1,6 @@
 import './App.css'
 import { useEffect, useMemo, useState } from 'react'
-import { resume } from './data/resume'
+import { resume } from './data/resume' 
 import { Header } from './components/Header'
 import { About } from './components/About'
 import { Experience } from './components/Experience'
